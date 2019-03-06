@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="c53bf460-2db7-466b-abad-0e4db5b3bf2d" ChangeDateTime="03/06/2019 05:08:58">
+    <Property Name="ElementName" Value="[dbo].[currency].[Currency_]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[currency]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Currency_Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2afbd029-1ac6-4b65-b2c5-f13da66d3098" ChangeDateTime="03/06/2019 05:10:55">
+    <Property Name="ElementName" Value="[dbo].[currency].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[currency]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Currency_Code" />
+  </Operation>
+</Operations>
