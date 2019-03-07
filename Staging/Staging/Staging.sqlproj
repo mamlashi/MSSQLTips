@@ -60,8 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="currency.sql" />
+    <Build Include="myform.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Staging.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HTMLPage1.htm" />
   </ItemGroup>
 </Project>
