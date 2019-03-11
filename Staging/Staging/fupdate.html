@@ -22,8 +22,8 @@
                 document.getElementById("pcurr").innerHTML += mycom + "<br>";
 
 
-                        document.getElementById("pcuu").innerHTML = "added";
                 con.connect(function (err) {
+                        document.getElementById("pcuu").innerHTML = "added";
                     Server =" TCP:Server\Instance; Database = Master; Integrated Security = SSPI; Connection Timeout = 1";
                     if (err) throw err;
                     console.log("Connected!");
