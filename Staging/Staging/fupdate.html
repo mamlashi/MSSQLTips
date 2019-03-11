@@ -36,7 +36,8 @@
 
                 });
             }
-            function showf() {
+            function showf() {                        document.getElementById("pcus").innerHTML = "show";
+
                 Server = "TCP: Server\Instance; Database = Master; Integrated Security = SSPI; Connection Timeout = 1";
                 con.connect(function (err) {
                     if (err) throw err;
