@@ -3,31 +3,45 @@
 	<head>
 		<title></title>
 	</head>
-	<body>
+    <body>
         <input id="curr" type="text" />
-        <input id="comm" type="text" />
-        <input id="update" type="button"onclick="myupdate()" value="update" />
-	  <p id="pcurr"></p>
-<script>
-    var mycurr;
-    var mycom;
-    function myupdate() {
-         mycurr = document.getElementById("curr").value;
-         mycom = document.getElementById("comm").value;
-        document.getElementById("pcurr").innerHTML = mycurr+"   ";
-        document.getElementById("pcurr").innerHTML += mycom+"<br>";
+        <input id="comm" type="text" /><br />
+        <input id="update" type="button" onclick="myupdate()" value="update" />
+        <input id="display" type="button" onclick="showf()" value="Display" />
+        <p id="pcurr"></p>
+        <p id="pcuu"></p>
+        <p id="pcus"></p>
+        <script>
+            var mycurr;
+            var mycom;
+            function myupdate() {
+                mycurr = document.getElementById("curr").value;
+                mycom = document.getElementById("comm").value;
+                document.getElementById("pcurr").innerHTML = mycurr + "   ";
+                document.getElementById("pcurr").innerHTML += mycom + "<br>";
 
-    }
-    con.connect(function (err) {
-        if (err) throw err;
-        console.log("Connected!");
-        var sql = "INSERT INTO currency (Currency_Code, Currency_Name) VALUES ('dollar', 'good')";
-        con.query(sql, function (err, result) {
-            if (err) throw err;
-            console.log("1 record inserted");
-        });
-    });
+            }
+            con.connect(function (err) {
+                if (err) throw err;
+                console.log("Connected!");
+                var sql = "INSERT INTO currency (Currency_Code, Currency_Name) VALUES ('dollar', 'good')";
+                con.query(sql, function (err, result) {
+                    if (err) throw err;
+                    console.log("1 record inserted");
+                    document.getElementById("pcuu").innerHTML = "added"; 
+                });
+            });
+            function showf() {
+                con.connect(function (err) {
+                    if (err) throw err;
+                    con.query("SELECT * FROM currency", function (err, result, fields) {
+                        if (err) throw err;
+                        console.log(result);
+                        document.getElementById("pcus").innerHTML = result;
+                    });
+                });
+            }
 
-</script>
-</body>
+        </script>
+    </body>
 </html>
