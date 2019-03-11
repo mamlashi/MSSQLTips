@@ -20,16 +20,17 @@
                 document.getElementById("pcurr").innerHTML = mycurr + "   ";
                 document.getElementById("pcurr").innerHTML += mycom + "<br>";
 
-            }
-            con.connect(function (err) {
-                if (err) throw err;
-                console.log("Connected!");
-                var sql = "INSERT INTO currency (Currency_Code, Currency_Name) VALUES ('dollar', 'good')";
-                con.query(sql, function (err, result) {
+            
+                con.connect(function (err) {
                     if (err) throw err;
-                    console.log("1 record inserted");
-                    document.getElementById("pcuu").innerHTML = "added"; 
-                });
+                    console.log("Connected!");
+                    var sql = "INSERT INTO currency (Currency_Code, Currency_Name) VALUES ('dollar', 'good')";
+                    con.query(sql, function (err, result) {
+                        if (err) throw err;
+                        console.log("1 record inserted");
+                        document.getElementById("pcuu").innerHTML = "added";
+                    });
+                }
             });
             function showf() {
                 con.connect(function (err) {
