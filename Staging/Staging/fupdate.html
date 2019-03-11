@@ -20,7 +20,7 @@
                 document.getElementById("pcurr").innerHTML = mycurr + "   ";
                 document.getElementById("pcurr").innerHTML += mycom + "<br>";
 
-            
+
                 con.connect(function (err) {
                     if (err) throw err;
                     console.log("Connected!");
@@ -30,8 +30,9 @@
                         console.log("1 record inserted");
                         document.getElementById("pcuu").innerHTML = "added";
                     });
-                }
-            });
+
+                });
+            }
             function showf() {
                 con.connect(function (err) {
                     if (err) throw err;
