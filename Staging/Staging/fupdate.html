@@ -6,6 +6,19 @@
 	<body>
         <input id="curr" type="text" />
         <input id="comm" type="text" />
-        <input id="update" type="button" value="update" />
-	</body>
+        <input id="update" type="button"onclick="myupdate()" value="update" />
+	  <p id="pcurr"></p>
+<script>
+    var mycurr;
+    var mycom;
+    function myupdate() {
+         mycurr = document.getElementById("curr").value;
+         mycom = document.getElementById("comm").value;
+        document.getElementById("pcurr").innerHTML = mycurr+"   ";
+        document.getElementById("pcurr").innerHTML += mycurr+"<br>";
+
+    }
+
+</script>
+</body>
 </html>
