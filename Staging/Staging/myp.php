@@ -1,11 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "Matt";
-$password = "ms";
-$database="Staging";
-$myname=$_POST['name'];
-$mynum=$_POST['mynum'];
-$myid=$_POST['myid'];
+$username = "Mmamlashi";
+$password = "ms013000";
 // Create connection
 $conn = new mysqli($servername, $username, $password,$database);
 // Check connection
